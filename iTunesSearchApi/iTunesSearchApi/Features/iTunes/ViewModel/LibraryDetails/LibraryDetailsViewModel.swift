@@ -8,12 +8,14 @@
 
 import Foundation
 class LibraryDetailsViewModel: LibraryDetailsViewModelProtocol {
+    var book: Book
     var headerText: String
     
     func viewDidLoad() {
     }
     
-    init() {
-        headerText = "Name of BOOK"
+    init(withBook book: Book) {
+        self.book = book
+        headerText = book.trackCensoredName ?? "Book Details"
     }
 }

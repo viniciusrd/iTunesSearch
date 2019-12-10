@@ -35,8 +35,8 @@ class HomeCoordinator: Coordinator {
         self.navigationController.pushViewController(controller, animated: true)
     }
     
-    func showLibraryDetailsViewController() {
-        let viewModel = LibraryDetailsViewModel()
+    func showLibraryDetailsViewController(withBook book: Book) {
+        let viewModel = LibraryDetailsViewModel(withBook: book)
         let controller = LibraryDetailsViewController(viewModel: viewModel)
         self.navigationController.pushViewController(controller, animated: true)
     }
@@ -49,7 +49,7 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate{
 }
 
 extension HomeCoordinator: LibraryViewModelCoordinatorDelegate{
-    func didSelectedRowAt() {        
-        showLibraryDetailsViewController()
+    func didSelectedRowAt(withBook book: Book) {        
+        showLibraryDetailsViewController(withBook: book)
     }
 }

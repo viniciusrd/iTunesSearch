@@ -40,7 +40,8 @@ extension ListLibraryViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.reuseIdentifier, for: indexPath) as! LibraryTableViewCell
-        cell.setup()
+        let book = self.viewModel.results[indexPath.row]
+        cell.setup(withBook: book)
         return cell
     }
 }

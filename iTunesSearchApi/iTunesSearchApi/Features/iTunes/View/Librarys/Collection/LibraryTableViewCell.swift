@@ -32,8 +32,21 @@ class LibraryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup()  {
-        tvTitleBook.text = "Tstasjhbhjd"
+    func setup(withBook book: Book)  {
+        if let posterURL =  book.artworkUrl100 {
+            ivCoverBook.setImageFromURL(toUrl: posterURL, completion: { (complete) in
+                DispatchQueue.main.async() {
+                    if complete{
+//                        self.aiLoading.stopAnimating()
+//                        self.aiLoading.isHidden = true
+                    }
+                }
+            })
+        }
+        
+        tvTitleBook.text = book.trackName
+        tvSubTitle.text = book.artistName
+        tvAverage.text = "\(book.averageUserRating ?? 0.0) %"
     }
     
 }

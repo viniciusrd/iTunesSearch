@@ -11,6 +11,7 @@
 		6EAE32EA239FD52300346E3C /* iTunesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE32E9239FD52300346E3C /* iTunesResponse.json */; };
 		6EAE32ED239FD5A000346E3C /* iTunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE32EC239FD5A000346E3C /* iTunesResponse.swift */; };
 		6EAE32EF239FD5F200346E3C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE32EE239FD5F200346E3C /* Book.swift */; };
+		6EAE32F2239FE9B500346E3C /* ImageViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE32F1239FE9B500346E3C /* ImageViewLoader.swift */; };
 		6EC63B46239F049F00842C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B45239F049F00842C80 /* AppDelegate.swift */; };
 		6EC63B48239F049F00842C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B47239F049F00842C80 /* SceneDelegate.swift */; };
 		6EC63B50239F049F00842C80 /* iTunesSearchApi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B4E239F049F00842C80 /* iTunesSearchApi.xcdatamodeld */; };
@@ -73,6 +74,7 @@
 		6EAE32E9239FD52300346E3C /* iTunesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iTunesResponse.json; sourceTree = "<group>"; };
 		6EAE32EC239FD5A000346E3C /* iTunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesResponse.swift; sourceTree = "<group>"; };
 		6EAE32EE239FD5F200346E3C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		6EAE32F1239FE9B500346E3C /* ImageViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewLoader.swift; sourceTree = "<group>"; };
 		6EC63B42239F049F00842C80 /* iTunesSearchApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC63B45239F049F00842C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC63B47239F049F00842C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6EAE32F0239FE99100346E3C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6EAE32F1239FE9B500346E3C /* ImageViewLoader.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6EC63B39239F049F00842C80 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 				6EC63BA4239F0FFE00842C80 /* Components */,
 				6EC63B7F239F080E00842C80 /* Service */,
 				6EAE32EB239FD55C00346E3C /* Models */,
+				6EAE32F0239FE99100346E3C /* Extensions */,
 				6EC63B85239F09AB00842C80 /* Features */,
 				6EAE32E4239FD12600346E3C /* Helper */,
 				6EC63B51239F04A000842C80 /* Assets.xcassets */,
@@ -614,6 +625,7 @@
 				6EC63BD2239F221600842C80 /* LibraryDetailsViewModelDelegate.swift in Sources */,
 				6EC63BA8239F103700842C80 /* CustomLabel.swift in Sources */,
 				6EC63B81239F084200842C80 /* Request.swift in Sources */,
+				6EAE32F2239FE9B500346E3C /* ImageViewLoader.swift in Sources */,
 				6EAE32E6239FD15E00346E3C /* ReadData.swift in Sources */,
 				6EC63BB9239F1A9E00842C80 /* ListLibraryViewController.swift in Sources */,
 				6EC63BBC239F1AD200842C80 /* LibraryViewModel.swift in Sources */,

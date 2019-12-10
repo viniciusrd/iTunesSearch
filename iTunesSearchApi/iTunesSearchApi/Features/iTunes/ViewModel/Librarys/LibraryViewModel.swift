@@ -26,7 +26,8 @@ class LibraryViewModel: LibraryViewModelProtocol{
     }
     
     func didSelectRow(_ row: Int, from controller: UIViewController) {
-        coordinatorDelegate?.didSelectedRowAt()
+        let selectBook = results[row]
+        coordinatorDelegate?.didSelectedRowAt(withBook: selectBook)
     }
     
     func numberOfItems() -> Int {

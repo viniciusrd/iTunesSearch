@@ -8,6 +8,8 @@
 
 import Foundation
 protocol LibraryDetailsViewModelProtocol {
+    var book: Book {get set}
     var headerText: String { get }
     func viewDidLoad()
+    
 }
