@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: BaseViewController<HomeViewModel> {
    
     @IBOutlet weak var hearderView: UIView!
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var recentStackView: UIStackView!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        viewModel.viewModelDelegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: viewModel.reuseIdentifier)
+        viewModel.recoverySearchRecents(context: context, delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +39,12 @@ class HomeViewController: BaseViewController<HomeViewModel> {
 }
 
 extension HomeViewController: HomeViewModeDelegate{
+    func saveRecent() {
+        viewModel.saveRecent(with: context)
+    }
+    
     func refresh() {
+        
     }
     
     func startRequest() {
@@ -53,12 +66,43 @@ extension HomeViewController: UISearchBarDelegate{
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        guard let searchText = viewModel.searchText, !searchText.isEmpty else { return }
-        viewModel.searchBooks(forText: searchText)
+        viewModel.searchBooks()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         self.viewModel.searchText = ""
+    }
+}
+
+extension HomeViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(indexPath.row, from: self)
+    }
+}
+
+extension HomeViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfItems()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: viewModel.reuseIdentifier)!
+        guard let recent = viewModel.fetchedController.fetchedObjects?[indexPath.row] else { return cell }
+        cell.textLabel?.text = recent.text
+        return cell
+    }
+}
+
+extension HomeViewController: NSFetchedResultsControllerDelegate{
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            if let indexPath = indexPath{
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        default:
+            tableView.reloadData()
+        }
     }
 }

@@ -6,8 +6,15 @@
 //  Copyright © 2019 Vinicius Rodrigues. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreData
+
 class HomeViewModel: HomeViewModelProtocol {
+    var reuseIdentifier: String
+    var fetchedController: NSFetchedResultsController<SearchRecent>!
+    var requestCoreData: RequestCoreDataProtocol{
+        return RequestCoreDataDefault()
+    }
     
     var bookAPI: iTunesAPIProtocol{
         return iTunesAPIDefault()
@@ -34,11 +41,35 @@ class HomeViewModel: HomeViewModelProtocol {
     init() {
         headerText = "Search"
         iBooks = nil
+        reuseIdentifier = String(describing: UITableViewCell.self)
     }
     
-    func searchBooks(forText text: String) {
+    func saveRecent(with context: NSManagedObjectContext) {
+        let recent = SearchRecent(context: context)
+        recent.text = searchText
+        requestCoreData.saveSearchRecents(context: context) { (result) in
+            switch result{
+            case true:
+                debugPrint("requestCoreData true")                
+            case false:
+                debugPrint("requestCoreData false")
+            }
+        }
+    }
+    
+    func recoverySearchRecents(context: NSManagedObjectContext, delegate: NSFetchedResultsControllerDelegate) {
+        let fetchRequest: NSFetchRequest<SearchRecent> = SearchRecent.fetchRequest()
+        requestCoreData.recoverySearchRecents(context: context, fetchRequest: fetchRequest, sortBy: "text", fetchDelegate: delegate) { (fetchedResultController) in
+            self.fetchedController = fetchedResultController
+            self.fetchedController?.delegate = delegate
+        }
+    }
+    
+    func searchBooks() {
+        guard let searchText = self.searchText, !searchText.isEmpty else { return }
         viewModelDelegate?.startRequest()
-        bookAPI.searchBook(forSearchText: text) { (response) in
+        viewModelDelegate?.saveRecent()
+        bookAPI.searchBook(forSearchText: searchText) { (response) in
             self.viewModelDelegate?.endRequest()
             switch response{
             case .success(let response):
@@ -52,5 +83,14 @@ class HomeViewModel: HomeViewModelProtocol {
                 print(error)
             }
         }
+    }
+    
+    func didSelectRow(_ row: Int, from controller: UIViewController) {
+        
+    }
+    
+    func numberOfItems() -> Int {
+        guard fetchedController != nil else { return 0}
+        return fetchedController?.fetchedObjects?.count ?? 0
     }
 }

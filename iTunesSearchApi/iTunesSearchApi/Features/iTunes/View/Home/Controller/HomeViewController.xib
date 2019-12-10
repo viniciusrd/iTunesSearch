@@ -11,7 +11,9 @@
             <connections>
                 <outlet property="contentView" destination="Qgt-1W-MRW" id="Hgx-2i-QPa"/>
                 <outlet property="hearderView" destination="poK-6J-j6T" id="Tz8-5X-W6A"/>
+                <outlet property="recentStackView" destination="H1J-dW-Xfj" id="tuO-te-jet"/>
                 <outlet property="searchBar" destination="1T0-Wf-QkB" id="xub-Sb-S8h"/>
+                <outlet property="tableView" destination="csq-Qf-GQY" id="dSd-36-xCA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +48,33 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-1W-MRW">
                             <rect key="frame" x="0.0" y="208" width="414" height="688"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H1J-dW-Xfj">
+                                    <rect key="frame" x="8" y="8" width="398" height="672"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muh-Sp-efn">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="49f-au-0dQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                            <color key="textColor" red="0.55707645419999996" green="0.55645161870000004" blue="0.5764736533" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="csq-Qf-GQY">
+                                            <rect key="frame" x="0.0" y="40" width="398" height="632"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </tableView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="H1J-dW-Xfj" firstAttribute="top" secondItem="Qgt-1W-MRW" secondAttribute="top" constant="8" id="DdO-N8-Abg"/>
+                                <constraint firstItem="H1J-dW-Xfj" firstAttribute="leading" secondItem="Qgt-1W-MRW" secondAttribute="leading" constant="8" id="EzN-0p-cO8"/>
+                                <constraint firstAttribute="bottom" secondItem="H1J-dW-Xfj" secondAttribute="bottom" constant="8" id="cc2-N1-8c4"/>
+                                <constraint firstAttribute="trailing" secondItem="H1J-dW-Xfj" secondAttribute="trailing" constant="8" id="r8F-WC-HLK"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.88357487954006297" green="0.88357487954006297" blue="0.88357487954006297" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

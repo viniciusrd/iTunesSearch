@@ -8,6 +8,7 @@
 
 import Foundation
 protocol HomeViewModeDelegate: class {
+    func saveRecent()
     func refresh()
     func startRequest()
     func endRequest()
