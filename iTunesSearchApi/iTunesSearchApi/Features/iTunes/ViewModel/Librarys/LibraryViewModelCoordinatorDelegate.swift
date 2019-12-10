@@ -1,5 +1,5 @@
 //
-//  LibraryViewModelProtocol.swift
+//  LibraryViewModelCoordinatorDelegate.swift
 //  iTunesSearchApi
 //
 //  Created by Vinicius Rodrigues on 09/12/19.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-protocol LibraryViewModelProtocol {
-    var headerText: String { get }
-    func viewDidLoad()
+protocol LibraryViewModelCoordinatorDelegate: class {
+    func didSelectedRowAt()
 }

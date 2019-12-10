@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC63B96239F0D4300842C80 /* Home */,
-				6EC63B9D239F0F0A00842C80 /* Library */,
+				6EC63B9D239F0F0A00842C80 /* Librarys */,
 				6EC63B9F239F0F6600842C80 /* LibraryDetails */,
 				6EC63B9E239F0F5800842C80 /* Recents */,
 			);
@@ -274,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC63BA0239F0F9500842C80 /* Home */,
-				6EC63BA1239F0FA500842C80 /* Library */,
+				6EC63BA1239F0FA500842C80 /* Librarys */,
 				6EC63BA2239F0FB100842C80 /* LibraryDetails */,
 				6EC63BA3239F0FCF00842C80 /* Recents */,
 			);
@@ -316,7 +316,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		6EC63B9D239F0F0A00842C80 /* Library */ = {
+		6EC63B9D239F0F0A00842C80 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
 				6EC63BBB239F1AD200842C80 /* LibraryViewModel.swift */,
@@ -324,7 +324,7 @@
 				6EC63BBF239F1B2F00842C80 /* LibraryViewModelDelegate.swift */,
 				6EC63BC1239F1B5100842C80 /* LibraryViewModelCoordinatorDelegate.swift */,
 			);
-			path = Library;
+			path = Librarys;
 			sourceTree = "<group>";
 		};
 		6EC63B9E239F0F5800842C80 /* Recents */ = {
@@ -354,13 +354,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		6EC63BA1239F0FA500842C80 /* Library */ = {
+		6EC63BA1239F0FA500842C80 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
 				6EC63BB6239F1A8300842C80 /* Controller */,
 				6EC63BC3239F1BC900842C80 /* Collection */,
 			);
-			path = Library;
+			path = Librarys;
 			sourceTree = "<group>";
 		};
 		6EC63BA2239F0FB100842C80 /* LibraryDetails */ = {

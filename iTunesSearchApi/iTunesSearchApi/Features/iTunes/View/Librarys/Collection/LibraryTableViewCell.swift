@@ -18,11 +18,22 @@ class LibraryTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        ivCoverBook.image = nil
+        tvTitleBook.text = nil
+        tvAverage.text = nil
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setup()  {
+        tvTitleBook.text = "Tstasjhbhjd"
     }
     
 }
