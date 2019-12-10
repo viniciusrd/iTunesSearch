@@ -22,7 +22,7 @@ protocol HomeViewModelProtocol {
     func saveRecent(with context: NSManagedObjectContext)
     func updateView()
     func recoverySearchRecents(context: NSManagedObjectContext, delegate: NSFetchedResultsControllerDelegate)
-    func searchBooks()
+    func searchBooks(saveRecent: Bool)
     func didSelectRow(_ row: Int, from controller: UIViewController)
     func numberOfItems() -> Int
 }

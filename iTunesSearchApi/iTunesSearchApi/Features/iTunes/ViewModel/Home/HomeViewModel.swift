@@ -65,10 +65,12 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
-    func searchBooks() {
+    func searchBooks(saveRecent: Bool = true) {
         guard let searchText = self.searchText, !searchText.isEmpty else { return }
         viewModelDelegate?.startRequest()
-        viewModelDelegate?.saveRecent()
+        if saveRecent {
+            viewModelDelegate?.saveRecent()
+        }
         bookAPI.searchBook(forSearchText: searchText) { (response) in
             self.viewModelDelegate?.endRequest()
             switch response{
@@ -84,9 +86,11 @@ class HomeViewModel: HomeViewModelProtocol {
             }
         }
     }
-    
+     
     func didSelectRow(_ row: Int, from controller: UIViewController) {
-        
+        guard let recent = fetchedController.fetchedObjects?[row], let text = recent.text else { return }
+        searchText = text
+        searchBooks(saveRecent: false)
     }
     
     func numberOfItems() -> Int {
