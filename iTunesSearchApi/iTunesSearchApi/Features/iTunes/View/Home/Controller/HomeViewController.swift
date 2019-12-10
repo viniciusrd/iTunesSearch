@@ -27,17 +27,38 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         searchBar.layer.cornerRadius = 10
     }
+    
+}
+
+extension HomeViewController: HomeViewModeDelegate{
+    func refresh() {
+    }
+    
+    func startRequest() {
+
+    }
+    
+    func endRequest() {
+        
+    }
+    
+    
 }
 
 extension HomeViewController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.viewModel.searchText = searchText
-        print(searchText)
+        viewModel.searchText = searchText
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        viewModel.coordinatorDelegate?.showListLibrary()
+        guard let searchText = viewModel.searchText, !searchText.isEmpty else { return }
+        viewModel.searchBooks(forText: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        self.viewModel.searchText = ""
     }
 }

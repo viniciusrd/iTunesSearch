@@ -8,6 +8,7 @@
 
 import UIKit
 protocol LibraryViewModelProtocol {
+    var results: [Book] { get }
     var headerText: String { get }
     var reuseIdentifier: String { get }
     

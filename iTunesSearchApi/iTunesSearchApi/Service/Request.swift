@@ -8,7 +8,7 @@
 
 import Foundation
 struct Request {
-    static let standardError = NSError(domain: "MovieAppError", code: 999, userInfo: ["Error":"Não foi possível conectar. Verifique se o app está atualizado ou tente novamente em alguns minutos."])
+    static let standardError = NSError(domain: "iTunesAppError", code: 999, userInfo: ["Error":"Não foi possível conectar. Verifique se o app está atualizado ou tente novamente em alguns minutos."])
     
     enum HTTPMethod: String {
         case get = "GET"
@@ -28,9 +28,7 @@ class APIRequest {
     typealias ResponseBlock<T> = (_ reponse: Request.Response<T>) -> Void
     private let scheme = Constants.scheme
     private let host = Constants.itunesHost
-    private let versionAPI = Constants.movieVersionAPI
     private var path: String
-    private var queryItem = URLQueryItem(name: "api_key", value: Constants.movieApiKey)
     private let httpMethod: Request.HTTPMethod
     private var extraHeader: [String: String]?
     private var parametersBody: [String: String]?
@@ -49,13 +47,15 @@ class APIRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
-        urlComponents.path = versionAPI
-        urlComponents.path.append(path)
-        urlComponents.queryItems = [queryItem]
+        urlComponents.path = path
         
         if let parameters = parametersURL{
             for item in parameters{
-                urlComponents.queryItems?.append(URLQueryItem(name: item.key, value: item.value))
+                if  urlComponents.queryItems == nil {
+                    urlComponents.queryItems = [URLQueryItem(name: item.key, value: item.value)]
+                }else{
+                   urlComponents.queryItems?.append(URLQueryItem(name: item.key, value: item.value))
+                }
             }
         }
         

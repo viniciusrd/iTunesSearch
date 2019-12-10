@@ -8,5 +8,7 @@
 
 import Foundation
 protocol LibraryViewModelDelegate: class {
-    
+    func refresh()
+    func startRequest()
+    func endRequest()
 }

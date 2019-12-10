@@ -27,8 +27,9 @@ class HomeCoordinator: Coordinator {
         
     }
     
-    func showListLibraryViewController() {
+    func showListLibraryViewController(withBooks books: [Book]) {
         let viewModel = LibraryViewModel()
+        viewModel.results = books
         let controller = ListLibraryViewController(viewModel: viewModel)
         viewModel.coordinatorDelegate = self
         self.navigationController.pushViewController(controller, animated: true)
@@ -42,8 +43,8 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewModelCoordinatorDelegate{
-    func showListLibrary() {
-        showListLibraryViewController()
+    func showListLibrary(withBooks books: [Book]) {
+        showListLibraryViewController(withBooks: books)
     }
 }
 

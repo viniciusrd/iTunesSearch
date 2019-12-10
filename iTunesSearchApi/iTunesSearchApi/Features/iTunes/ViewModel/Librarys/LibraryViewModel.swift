@@ -8,8 +8,9 @@
 
 import UIKit
 class LibraryViewModel: LibraryViewModelProtocol{
-    var reuseIdentifier: String
     
+    var results: [Book] = []
+    var reuseIdentifier: String
     var headerText: String
     
     func viewDidLoad() {
@@ -29,6 +30,6 @@ class LibraryViewModel: LibraryViewModelProtocol{
     }
     
     func numberOfItems() -> Int {
-        return 10
+        return results.count
     }
 }

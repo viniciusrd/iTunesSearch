@@ -8,5 +8,5 @@
 
 import Foundation
 protocol HomeViewModelCoordinatorDelegate: class {
-    func showListLibrary()
+    func showListLibrary(withBooks books: [Book])
 }
