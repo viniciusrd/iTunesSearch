@@ -19,6 +19,6 @@ class HomeViewModel: HomeViewModelProtocol {
     weak var viewModelDelegate: HomeViewModeDelegate?
     
     init() {
-        headerText = ""
+        headerText = "Search"
     }
 }

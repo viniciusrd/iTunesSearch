@@ -23,8 +23,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-     
-        self.navigationController?.navigationBar.topItem?.title = "Search"
+        self.navigationController?.navigationBar.topItem?.title = viewModel.headerText
         self.navigationController?.navigationBar.prefersLargeTitles = true
         searchBar.layer.cornerRadius = 10
     }

@@ -20,6 +20,12 @@ class ListLibraryViewController: BaseViewController<LibraryViewModel> {
         tableView.dataSource = self
         tableView.register(UINib(nibName: viewModel.reuseIdentifier, bundle: nil), forCellReuseIdentifier: viewModel.reuseIdentifier)
     }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = viewModel.headerText
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
 }
 
 extension ListLibraryViewController: UITableViewDelegate{

@@ -14,6 +14,6 @@ class LibraryDetailsViewModel: LibraryDetailsViewModelProtocol {
     }
     
     init() {
-        headerText = ""
+        headerText = "Name of BOOK"
     }
 }

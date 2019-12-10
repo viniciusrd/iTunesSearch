@@ -13,7 +13,10 @@ class LibraryDetailsViewController: BaseViewController<LibraryDetailsViewModel> 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.topItem?.title = "Details"
-        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = viewModel.headerText
     }
 }
