@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E35C5C523A0529C00C2D279 /* iTunesAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35C5C423A0529B00C2D279 /* iTunesAPIProtocol.swift */; };
+		6E35C5C823A052DF00C2D279 /* RequestCoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35C5C723A052DF00C2D279 /* RequestCoreDataProtocol.swift */; };
+		6E35C5CA23A0546000C2D279 /* BookResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35C5C923A0546000C2D279 /* BookResponseTest.swift */; };
 		6EAE32E6239FD15E00346E3C /* ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE32E5239FD15E00346E3C /* ReadData.swift */; };
 		6EAE32EA239FD52300346E3C /* iTunesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE32E9239FD52300346E3C /* iTunesResponse.json */; };
 		6EAE32ED239FD5A000346E3C /* iTunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE32EC239FD5A000346E3C /* iTunesResponse.swift */; };
@@ -19,7 +22,6 @@
 		6EC63B50239F049F00842C80 /* iTunesSearchApi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B4E239F049F00842C80 /* iTunesSearchApi.xcdatamodeld */; };
 		6EC63B52239F04A000842C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC63B51239F04A000842C80 /* Assets.xcassets */; };
 		6EC63B55239F04A000842C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC63B53239F04A000842C80 /* LaunchScreen.storyboard */; };
-		6EC63B60239F04A000842C80 /* iTunesSearchApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B5F239F04A000842C80 /* iTunesSearchApiTests.swift */; };
 		6EC63B6B239F04A000842C80 /* iTunesSearchApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B6A239F04A000842C80 /* iTunesSearchApiUITests.swift */; };
 		6EC63B79239F076000842C80 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B78239F076000842C80 /* AppCoordinator.swift */; };
 		6EC63B7C239F078800842C80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B7B239F078800842C80 /* Coordinator.swift */; };
@@ -52,6 +54,10 @@
 		6EC63BD0239F21B200842C80 /* LibraryDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BCF239F21B200842C80 /* LibraryDetailsViewModelProtocol.swift */; };
 		6EC63BD2239F221600842C80 /* LibraryDetailsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BD1239F221600842C80 /* LibraryDetailsViewModelDelegate.swift */; };
 		6EC63BD4239F224000842C80 /* LibraryDetailsViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BD3239F224000842C80 /* LibraryDetailsViewModelCoordinatorDelegate.swift */; };
+		6ED36B7B23A0586900E33AC4 /* BookResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E35C5CB23A054BE00C2D279 /* BookResponse.json */; };
+		6ED36B7D23A05BB900E33AC4 /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED36B7C23A05BB900E33AC4 /* ServiceTest.swift */; };
+		6EE7D2C323A02731006FCBB4 /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7D2C223A02731006FCBB4 /* FlowCoordinatorTests.swift */; };
+		6EF5940923A06F7C001C827F /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5940823A06F7C001C827F /* ViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E35C5C423A0529B00C2D279 /* iTunesAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIProtocol.swift; sourceTree = "<group>"; };
+		6E35C5C723A052DF00C2D279 /* RequestCoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCoreDataProtocol.swift; sourceTree = "<group>"; };
+		6E35C5C923A0546000C2D279 /* BookResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponseTest.swift; sourceTree = "<group>"; };
+		6E35C5CB23A054BE00C2D279 /* BookResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookResponse.json; sourceTree = "<group>"; };
 		6EAE32E5239FD15E00346E3C /* ReadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadData.swift; sourceTree = "<group>"; };
 		6EAE32E9239FD52300346E3C /* iTunesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iTunesResponse.json; sourceTree = "<group>"; };
 		6EAE32EC239FD5A000346E3C /* iTunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesResponse.swift; sourceTree = "<group>"; };
@@ -79,7 +89,7 @@
 		6EAE32F1239FE9B500346E3C /* ImageViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewLoader.swift; sourceTree = "<group>"; };
 		6EAE32F4239FFF4100346E3C /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		6EAE32F823A002E400346E3C /* RequestCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCoreData.swift; sourceTree = "<group>"; };
-		6EC63B42239F049F00842C80 /* iTunesSearchApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC63B42239F049F00842C80 /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC63B45239F049F00842C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC63B47239F049F00842C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6EC63B4F239F049F00842C80 /* iTunesSearchApi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesSearchApi.xcdatamodel; sourceTree = "<group>"; };
@@ -87,7 +97,6 @@
 		6EC63B54239F04A000842C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EC63B56239F04A000842C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC63B5B239F04A000842C80 /* iTunesSearchApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EC63B5F239F04A000842C80 /* iTunesSearchApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchApiTests.swift; sourceTree = "<group>"; };
 		6EC63B61239F04A000842C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC63B66239F04A000842C80 /* iTunesSearchApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC63B6A239F04A000842C80 /* iTunesSearchApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchApiUITests.swift; sourceTree = "<group>"; };
@@ -123,6 +132,9 @@
 		6EC63BCF239F21B200842C80 /* LibraryDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
 		6EC63BD1239F221600842C80 /* LibraryDetailsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailsViewModelDelegate.swift; sourceTree = "<group>"; };
 		6EC63BD3239F224000842C80 /* LibraryDetailsViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailsViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		6ED36B7C23A05BB900E33AC4 /* ServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
+		6EE7D2C223A02731006FCBB4 /* FlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorTests.swift; sourceTree = "<group>"; };
+		6EF5940823A06F7C001C827F /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E35C5C323A0528000C2D279 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6E35C5C423A0529B00C2D279 /* iTunesAPIProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6E35C5C623A052D000C2D279 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6E35C5C723A052DF00C2D279 /* RequestCoreDataProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		6EAE32E4239FD12600346E3C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +198,7 @@
 		6EAE32E8239FD18900346E3C /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E35C5CB23A054BE00C2D279 /* BookResponse.json */,
 				6EAE32E9239FD52300346E3C /* iTunesResponse.json */,
 			);
 			path = Files;
@@ -179,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				6EAE32EC239FD5A000346E3C /* iTunesResponse.swift */,
-				6EAE32EE239FD5F200346E3C /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +224,7 @@
 		6EAE32F3239FFE6700346E3C /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				6E35C5C623A052D000C2D279 /* Protocol */,
 				6EAE32F723A0009000346E3C /* CoreData */,
 				6EAE32F823A002E400346E3C /* RequestCoreData.swift */,
 			);
@@ -206,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC63B80239F084200842C80 /* Request.swift */,
+				6E35C5C323A0528000C2D279 /* Protocol */,
 				6EC63B8D239F0B4E00842C80 /* EndPoints */,
 			);
 			path = Network;
@@ -232,7 +262,7 @@
 		6EC63B43239F049F00842C80 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6EC63B42239F049F00842C80 /* iTunesSearchApi.app */,
+				6EC63B42239F049F00842C80 /* iTunes Search.app */,
 				6EC63B5B239F04A000842C80 /* iTunesSearchApiTests.xctest */,
 				6EC63B66239F04A000842C80 /* iTunesSearchApiUITests.xctest */,
 			);
@@ -263,7 +293,10 @@
 		6EC63B5E239F04A000842C80 /* iTunesSearchApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				6EC63B5F239F04A000842C80 /* iTunesSearchApiTests.swift */,
+				6ED36B7C23A05BB900E33AC4 /* ServiceTest.swift */,
+				6EE7D2C223A02731006FCBB4 /* FlowCoordinatorTests.swift */,
+				6E35C5C923A0546000C2D279 /* BookResponseTest.swift */,
+				6EF5940823A06F7C001C827F /* ViewModelTest.swift */,
 				6EC63B61239F04A000842C80 /* Info.plist */,
 			);
 			path = iTunesSearchApiTests;
@@ -334,6 +367,7 @@
 		6EC63B8A239F0AC600842C80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6EAE32EE239FD5F200346E3C /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,7 +389,6 @@
 				6EC63BA0239F0F9500842C80 /* Home */,
 				6EC63BA1239F0FA500842C80 /* Librarys */,
 				6EC63BA2239F0FB100842C80 /* LibraryDetails */,
-				6EC63BA3239F0FCF00842C80 /* Recents */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,13 +483,6 @@
 			path = LibraryDetails;
 			sourceTree = "<group>";
 		};
-		6EC63BA3239F0FCF00842C80 /* Recents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recents;
-			sourceTree = "<group>";
-		};
 		6EC63BA4239F0FFE00842C80 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,7 +554,7 @@
 			);
 			name = iTunesSearchApi;
 			productName = iTunesSearchApi;
-			productReference = 6EC63B42239F049F00842C80 /* iTunesSearchApi.app */;
+			productReference = 6EC63B42239F049F00842C80 /* iTunes Search.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6EC63B5A239F04A000842C80 /* iTunesSearchApiTests */ = {
@@ -615,6 +641,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED36B7B23A0586900E33AC4 /* BookResponse.json in Resources */,
 				6EC63BBA239F1A9E00842C80 /* ListLibraryViewController.xib in Resources */,
 				6EC63BAE239F10F400842C80 /* SearchView.xib in Resources */,
 				6EAE32EA239FD52300346E3C /* iTunesResponse.json in Resources */,
@@ -649,6 +676,7 @@
 			files = (
 				6EAE32F923A002E400346E3C /* RequestCoreData.swift in Sources */,
 				6EC63BBE239F1AF300842C80 /* LibraryViewModelProtocol.swift in Sources */,
+				6E35C5C523A0529C00C2D279 /* iTunesAPIProtocol.swift in Sources */,
 				6EC63B50239F049F00842C80 /* iTunesSearchApi.xcdatamodeld in Sources */,
 				6EC63BAA239F105400842C80 /* CustomButton.swift in Sources */,
 				6EC63BB4239F139900842C80 /* HomeViewController.swift in Sources */,
@@ -669,6 +697,7 @@
 				6EAE32ED239FD5A000346E3C /* iTunesResponse.swift in Sources */,
 				6EC63B9C239F0E7E00842C80 /* HomeViewModelCoordinatorDelegate.swift in Sources */,
 				6EC63B7C239F078800842C80 /* Coordinator.swift in Sources */,
+				6E35C5C823A052DF00C2D279 /* RequestCoreDataProtocol.swift in Sources */,
 				6EC63B79239F076000842C80 /* AppCoordinator.swift in Sources */,
 				6EC63B46239F049F00842C80 /* AppDelegate.swift in Sources */,
 				6EC63BA6239F101900842C80 /* CustomView.swift in Sources */,
@@ -689,7 +718,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC63B60239F04A000842C80 /* iTunesSearchApiTests.swift in Sources */,
+				6ED36B7D23A05BB900E33AC4 /* ServiceTest.swift in Sources */,
+				6EE7D2C323A02731006FCBB4 /* FlowCoordinatorTests.swift in Sources */,
+				6EF5940923A06F7C001C827F /* ViewModelTest.swift in Sources */,
+				6E35C5CA23A0546000C2D279 /* BookResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +886,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.vinicius.duarte.iTunesSearchApi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iTunes Search";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -872,7 +904,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.vinicius.duarte.iTunesSearchApi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iTunes Search";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

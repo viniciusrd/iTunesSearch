@@ -8,10 +8,6 @@
 
 import Foundation
 import CoreData
-protocol RequestCoreDataProtocol {
-    func saveSearchRecents(context: NSManagedObjectContext,  completion: @escaping(_ success: Bool) -> Void)
-    func recoverySearchRecents(context: NSManagedObjectContext, fetchRequest: NSFetchRequest<SearchRecent>, sortBy text: String, fetchDelegate: NSFetchedResultsControllerDelegate, completion: @escaping(_ fetchedResultController: NSFetchedResultsController<SearchRecent>) -> Void)
-}
 
 class RequestCoreDataDefault: RequestCoreDataProtocol {
     func saveSearchRecents(context: NSManagedObjectContext, completion: @escaping(_ success: Bool) -> Void) {

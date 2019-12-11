@@ -7,9 +7,6 @@
 //
 
 import Foundation
-protocol iTunesAPIProtocol {
-    func searchBook(forSearchText text: String, completion: @escaping APIRequest.ResponseBlock<iTunesResponse>)
-}
 
 class iTunesAPIDefault: iTunesAPIProtocol {
     func searchBook(forSearchText text: String, completion: @escaping APIRequest.ResponseBlock<iTunesResponse>) {

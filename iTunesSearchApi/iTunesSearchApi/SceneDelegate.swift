@@ -19,18 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        appWindow.windowScene = windowScene
-        let applicationCoordinator = AppCoordinator(window: appWindow)
-        self.appCoordinator = applicationCoordinator
-        applicationCoordinator.start()
-        
-        appWindow.makeKeyAndVisible()
-        window = appWindow
-        
-        window?.tintAdjustmentMode = .normal
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
+        setupRootViewController(windowScene: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -64,6 +53,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    func setupRootViewController(windowScene: UIWindowScene){
+        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        appWindow.windowScene = windowScene
+        let applicationCoordinator = AppCoordinator(window: appWindow)
+        self.appCoordinator = applicationCoordinator
+        applicationCoordinator.start()
+        
+        appWindow.makeKeyAndVisible()
+        window = appWindow
+        
+        window?.tintAdjustmentMode = .normal
+    }
 
 }
 

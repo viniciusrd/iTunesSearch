@@ -1,8 +1,9 @@
 {
     "resultCount":50,
     "results": [
-        {"artworkUrl60":"https://is2-ssl.mzstatic.com/image/thumb/Publication123/v4/59/4c/6a/594c6a5a-45e4-4e9b-0f90-ecf59a8ccb48/source/60x60bb.jpg", 
-        "artworkUrl100":"https://is2-ssl.mzstatic.com/image/thumb/Publication123/v4/59/4c/6a/594c6a5a-45e4-4e9b-0f90-ecf59a8ccb48/source/100x100bb.jpg", 
+        {
+        "artworkUrl60":"https://is2-ssl.mzstatic.com/image/thumb/Publication123/v4/59/4c/6a/594c6a5a-45e4-4e9b-0f90-ecf59a8ccb48/source/60x60bb.jpg",
+        "artworkUrl100":"https://is2-ssl.mzstatic.com/image/thumb/Publication123/v4/59/4c/6a/594c6a5a-45e4-4e9b-0f90-ecf59a8ccb48/source/100x100bb.jpg",
         "artistViewUrl":"https://books.apple.com/us/artist/apple-inc/405307759?uo=4", 
         "trackCensoredName":"The Swift Programming Language (Swift 5.1)", 
         "fileSizeBytes":4370219, 

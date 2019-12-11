@@ -36,12 +36,6 @@ class LibraryDetailsViewController: BaseViewController<LibraryDetailsViewModel> 
         let book = viewModel.book
         if let posterURL =  book.artworkUrl100 {
             ivCoverBook.setImageFromURL(toUrl: posterURL, completion: { (complete) in
-                DispatchQueue.main.async() {
-                    if complete{
-//                        self.aiLoading.stopAnimating()
-//                        self.aiLoading.isHidden = true
-                    }
-                }
             })
         }
         tvTitle.text = book.trackName

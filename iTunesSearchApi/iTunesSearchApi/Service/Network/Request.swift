@@ -34,20 +34,46 @@ class APIRequest {
     private var parametersBody: [String: String]?
     private var parametersURL: [String: String]?
     
+    private var urlComponents: URLComponents?
+    
     init(method: Request.HTTPMethod, path: String, parametersBody:[String:String]? = nil, parametersURL:[String:String]? = nil, headers:[String: String]? = nil ) {
         self.httpMethod = method
         self.path = path
         self.extraHeader = headers
         self.parametersBody = parametersBody
         self.parametersURL = parametersURL
+        self.urlComponents = URLComponents()
     }
     
-    func makeRequest(completion: @escaping (Data?, URLResponse?, Error?) -> Void)  {
-    
-        var urlComponents = URLComponents()
+    func getUrl() -> String? {
+        guard var urlComponents = urlComponents else { return ""}
         urlComponents.scheme = scheme
         urlComponents.host = host
         urlComponents.path = path
+        return urlComponents.url?.absoluteString ?? ""
+    }
+    
+    func getUrlParameter() -> [URLQueryItem]? {
+        guard var urlComponents = urlComponents else{ return nil}
+        if let parameters = parametersURL{
+            for item in parameters{
+                if  urlComponents.queryItems == nil {
+                    urlComponents.queryItems = [URLQueryItem(name: item.key, value: item.value)]
+                }else{
+                   urlComponents.queryItems?.append(URLQueryItem(name: item.key, value: item.value))
+                }
+            }
+        }
+        return urlComponents.queryItems
+    }
+    
+    func makeRequest(completion: @escaping (Data?, URLResponse?, Error?) -> Void)  {
+
+        guard var urlComponents = urlComponents else{ return }
+        urlComponents.scheme = scheme
+        urlComponents.host = host
+        urlComponents.path = path
+     
         
         if let parameters = parametersURL{
             for item in parameters{

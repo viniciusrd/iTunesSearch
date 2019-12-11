@@ -11,7 +11,10 @@ import UIKit
 extension UIImageView{
     
     func setImageFromURL(toUrl url: String , completion: @escaping (Bool) -> Void)  {
-        guard let imageURL = URL(string: url) else { return }
+        guard let imageURL = URL(string: url) else {
+            completion(false)
+            return
+        }
         setImage(imageURL) { (complete) in
             completion(complete)
         }
@@ -22,7 +25,10 @@ extension UIImageView{
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             print(response as Any)
             guard let data = data, error == nil,
-                let image = UIImage(data: data) else { return }
+                let image = UIImage(data: data) else {
+                    completion(false)
+                    return
+            }
             completion(true)
             DispatchQueue.main.async() {
                 self.image = image
