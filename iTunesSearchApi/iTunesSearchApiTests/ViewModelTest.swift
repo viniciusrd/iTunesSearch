@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iTunesSearchApi
+@testable import iTunes_Search
 class ViewModelTest: XCTestCase {
 
     override func setUp() {
@@ -50,11 +50,35 @@ class ViewModelTest: XCTestCase {
         let viewModel = LibraryDetailsViewModel(withBook: book!)
         XCTAssertNotNil(viewModel.book, "Could not nil Object")
     }
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testreuseIdentifierHomeViewModel(){
+        let reuseIdentifier =  String(describing: UITableViewCell.self)
+        let viewModel = HomeViewModel()
+        XCTAssertEqual(viewModel.reuseIdentifier, reuseIdentifier,"The reusable Identifier text should be In Home View")
     }
-
+    
+    func testreuseIdentifierLibraryViewModel(){
+        let reuseIdentifier =  String(describing: LibraryTableViewCell.self)
+        let viewModel = LibraryViewModel()
+        XCTAssertEqual(viewModel.reuseIdentifier, reuseIdentifier,"The reusable Identifier text should be In Your Library")
+    }
+    
+    func testNumberOfItemsInLibraryViewModel()  {
+        let viewModel = LibraryViewModel()
+        XCTAssert(viewModel.numberOfItems() == 0, "The Numbers of Items should ne not bigger then")
+    }
+    
+    func testSaveSearchRecent()  {
+        let searchText = "Text"
+        let vc = UIViewController()
+        let vm = HomeViewModel()
+        vm.searchText = searchText
+        XCTAssertEqual(vm.searchText, searchText, "Search text is equal")
+        vm.saveRecent(with: vc.context)
+    }
+    
+    func testHomViewModelInstantiateBookProtocol() {
+        let vm = HomeViewModel()
+        XCTAssertNotNil(vm.bookAPI, "BookAPI should be not nil")
+    }    
 }

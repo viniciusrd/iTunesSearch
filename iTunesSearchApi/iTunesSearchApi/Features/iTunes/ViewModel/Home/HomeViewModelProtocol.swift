@@ -18,7 +18,6 @@ protocol HomeViewModelProtocol {
     var fetchedController: NSFetchedResultsController<SearchRecent>! {get set}
     var reuseIdentifier: String { get }
     
-    func viewDidLoad()
     func saveRecent(with context: NSManagedObjectContext)
     func updateView()
     func recoverySearchRecents(context: NSManagedObjectContext, delegate: NSFetchedResultsControllerDelegate)

@@ -6,13 +6,12 @@
 //  Copyright © 2019 Vinicius Rodrigues. All rights reserved.
 //
 
-import UIKit
+import Foundation
 protocol LibraryViewModelProtocol {
     var results: [Book] { get }
     var headerText: String { get }
     var reuseIdentifier: String { get }
     
-    func viewDidLoad()
-    func didSelectRow(_ row: Int, from controller: UIViewController)
+    func didSelectRow(_ row: Int)
     func numberOfItems() -> Int
 }

@@ -34,10 +34,6 @@
 		6EC63B98239F0D5700842C80 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B97239F0D5700842C80 /* HomeViewModelProtocol.swift */; };
 		6EC63B9A239F0E4900842C80 /* HomeViewModeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B99239F0E4900842C80 /* HomeViewModeDelegate.swift */; };
 		6EC63B9C239F0E7E00842C80 /* HomeViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63B9B239F0E7E00842C80 /* HomeViewModelCoordinatorDelegate.swift */; };
-		6EC63BA6239F101900842C80 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BA5239F101900842C80 /* CustomView.swift */; };
-		6EC63BA8239F103700842C80 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BA7239F103700842C80 /* CustomLabel.swift */; };
-		6EC63BAA239F105400842C80 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BA9239F105400842C80 /* CustomButton.swift */; };
-		6EC63BAE239F10F400842C80 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC63BAD239F10F400842C80 /* SearchView.xib */; };
 		6EC63BB4239F139900842C80 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BB2239F139900842C80 /* HomeViewController.swift */; };
 		6EC63BB5239F139900842C80 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC63BB3239F139900842C80 /* HomeViewController.xib */; };
 		6EC63BB9239F1A9E00842C80 /* ListLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC63BB7239F1A9E00842C80 /* ListLibraryViewController.swift */; };
@@ -112,10 +108,6 @@
 		6EC63B97239F0D5700842C80 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		6EC63B99239F0E4900842C80 /* HomeViewModeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModeDelegate.swift; sourceTree = "<group>"; };
 		6EC63B9B239F0E7E00842C80 /* HomeViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
-		6EC63BA5239F101900842C80 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		6EC63BA7239F103700842C80 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		6EC63BA9239F105400842C80 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		6EC63BAD239F10F400842C80 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		6EC63BB2239F139900842C80 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6EC63BB3239F139900842C80 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		6EC63BB7239F1A9E00842C80 /* ListLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLibraryViewController.swift; sourceTree = "<group>"; };
@@ -495,9 +487,6 @@
 		6EC63BAB239F107300842C80 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				6EC63BA5239F101900842C80 /* CustomView.swift */,
-				6EC63BA7239F103700842C80 /* CustomLabel.swift */,
-				6EC63BA9239F105400842C80 /* CustomButton.swift */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -505,7 +494,6 @@
 		6EC63BAC239F109C00842C80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6EC63BAD239F10F400842C80 /* SearchView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -643,7 +631,6 @@
 			files = (
 				6ED36B7B23A0586900E33AC4 /* BookResponse.json in Resources */,
 				6EC63BBA239F1A9E00842C80 /* ListLibraryViewController.xib in Resources */,
-				6EC63BAE239F10F400842C80 /* SearchView.xib in Resources */,
 				6EAE32EA239FD52300346E3C /* iTunesResponse.json in Resources */,
 				6EC63BC7239F1C0400842C80 /* LibraryTableViewCell.xib in Resources */,
 				6EC63B55239F04A000842C80 /* LaunchScreen.storyboard in Resources */,
@@ -678,11 +665,9 @@
 				6EC63BBE239F1AF300842C80 /* LibraryViewModelProtocol.swift in Sources */,
 				6E35C5C523A0529C00C2D279 /* iTunesAPIProtocol.swift in Sources */,
 				6EC63B50239F049F00842C80 /* iTunesSearchApi.xcdatamodeld in Sources */,
-				6EC63BAA239F105400842C80 /* CustomButton.swift in Sources */,
 				6EC63BB4239F139900842C80 /* HomeViewController.swift in Sources */,
 				6EC63BC2239F1B5100842C80 /* LibraryViewModelCoordinatorDelegate.swift in Sources */,
 				6EC63BD2239F221600842C80 /* LibraryDetailsViewModelDelegate.swift in Sources */,
-				6EC63BA8239F103700842C80 /* CustomLabel.swift in Sources */,
 				6EC63B81239F084200842C80 /* Request.swift in Sources */,
 				6EAE32F2239FE9B500346E3C /* ImageViewLoader.swift in Sources */,
 				6EAE32E6239FD15E00346E3C /* ReadData.swift in Sources */,
@@ -700,7 +685,6 @@
 				6E35C5C823A052DF00C2D279 /* RequestCoreDataProtocol.swift in Sources */,
 				6EC63B79239F076000842C80 /* AppCoordinator.swift in Sources */,
 				6EC63B46239F049F00842C80 /* AppDelegate.swift in Sources */,
-				6EC63BA6239F101900842C80 /* CustomView.swift in Sources */,
 				6EC63BC6239F1C0400842C80 /* LibraryTableViewCell.swift in Sources */,
 				6EC63B98239F0D5700842C80 /* HomeViewModelProtocol.swift in Sources */,
 				6EC63B84239F08B300842C80 /* Constanst.swift in Sources */,
@@ -928,7 +912,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearchApi.app/iTunesSearchApi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Search.app/iTunes Search";
 			};
 			name = Debug;
 		};
@@ -950,7 +934,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearchApi.app/iTunesSearchApi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Search.app/iTunes Search";
 			};
 			name = Release;
 		};

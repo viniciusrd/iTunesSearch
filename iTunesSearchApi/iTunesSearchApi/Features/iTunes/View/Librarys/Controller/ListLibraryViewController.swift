@@ -29,7 +29,7 @@ class ListLibraryViewController: BaseViewController<LibraryViewModel> {
 
 extension ListLibraryViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         viewModel.didSelectRow(indexPath.row, from: self)
+         viewModel.didSelectRow(indexPath.row)
     }
 }
 

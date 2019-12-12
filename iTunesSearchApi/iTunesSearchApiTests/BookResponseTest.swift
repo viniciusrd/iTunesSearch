@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iTunesSearchApi
+@testable import iTunes_Search
 
 class BookResponseTest: XCTestCase {
 
@@ -18,10 +18,15 @@ class BookResponseTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testInvalidJson(){
+        let itunesResponse: iTunesResponse? = DataReader.loadJson(filename: "")
+        XCTAssertNil(itunesResponse, "The Book should be nil")
+    }
 
     func testItunesResponse()  {
         let itunesResponse: iTunesResponse? = DataReader.loadJson(filename: "iTunesResponse")
-        XCTAssertNotNil(itunesResponse, "The Book should be not nil")
+        XCTAssertNotNil(itunesResponse, "The itunesResponse should be not nil")
     }
     
     func testBookResponse() {

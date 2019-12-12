@@ -22,11 +22,7 @@ class HomeViewModel: HomeViewModelProtocol {
     var headerText: String
     var searchText: String?
     var iBooks: iTunesResponse?
-    
-    func viewDidLoad() {
         
-    }
-    
     func updateView() {
         guard let booksResults = iBooks else { return }
         if booksResults.results.count > 0 {
@@ -68,9 +64,7 @@ class HomeViewModel: HomeViewModelProtocol {
     func searchBooks(saveRecent: Bool = true) {
         guard let searchText = self.searchText, !searchText.isEmpty else { return }
         viewModelDelegate?.startRequest()
-        if saveRecent {
-            viewModelDelegate?.saveRecent()
-        }
+       
         bookAPI.searchBook(forSearchText: searchText) { (response) in
             self.viewModelDelegate?.endRequest()
             switch response{
@@ -78,6 +72,9 @@ class HomeViewModel: HomeViewModelProtocol {
                 guard let response = response else { return }
                 self.iBooks = response
                 DispatchQueue.main.async {
+                    if saveRecent {
+                        self.viewModelDelegate?.saveRecent()       
+                    }
                    self.updateView()
                 }
             case .failure(let error):

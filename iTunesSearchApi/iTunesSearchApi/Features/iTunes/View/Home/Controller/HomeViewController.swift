@@ -21,11 +21,30 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDelegates()
+        tableViewRegister()
+        loadSearchRecents()
+        setupUI()
+    }
+    
+    override func setupUI() {
+        searchBar.barTintColor = .white
+        searchBar.backgroundColor = .lightGray
+        searchBar.layer.borderWidth = 0
+    }
+    
+    func setDelegates()  {
         searchBar.delegate = self
         viewModel.viewModelDelegate = self
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func tableViewRegister(){
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: viewModel.reuseIdentifier)
+    }
+    
+    func loadSearchRecents()  {
         viewModel.recoverySearchRecents(context: context, delegate: self)
     }
     
@@ -34,6 +53,10 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         self.navigationController?.navigationBar.topItem?.title = viewModel.headerText
         self.navigationController?.navigationBar.prefersLargeTitles = true
         searchBar.layer.cornerRadius = 10
+    }
+    
+    func toggleStackViewRecents(_ isHidden: Bool){
+        recentStackView.isHidden = isHidden
     }
     
 }
@@ -83,7 +106,9 @@ extension HomeViewController: UITableViewDelegate{
 
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfItems()
+        let count = viewModel.numberOfItems()
+        toggleStackViewRecents(count == 0 ? true : false)
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

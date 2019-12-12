@@ -12,11 +12,7 @@ class LibraryViewModel: LibraryViewModelProtocol{
     var results: [Book] = []
     var reuseIdentifier: String
     var headerText: String
-    
-    func viewDidLoad() {
-        
-    }
-    
+     
     weak var coordinatorDelegate: LibraryViewModelCoordinatorDelegate?
     weak var viewModelDelegate: LibraryViewModelDelegate?
     
@@ -25,7 +21,7 @@ class LibraryViewModel: LibraryViewModelProtocol{
         reuseIdentifier = String(describing: LibraryTableViewCell.self)
     }
     
-    func didSelectRow(_ row: Int, from controller: UIViewController) {
+    func didSelectRow(_ row: Int) {
         let selectBook = results[row]
         coordinatorDelegate?.didSelectedRowAt(withBook: selectBook)
     }
